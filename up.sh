@@ -37,4 +37,4 @@ if [ ! -f "$SNAPSHOT" ]; then
 fi
 
 echo ""
-echo "VM '${VM_NAME}' is ready. Run: orb shell ${VM_NAME}"
+echo "VM '${VM_NAME}' is ready. Run: orb -m ${VM_NAME}"

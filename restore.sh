@@ -25,4 +25,4 @@ fi
 echo "Importing snapshot..."
 orb import "$SNAPSHOT" "$VM_NAME"
 orb start "$VM_NAME" 2>/dev/null || true
-echo "VM '${VM_NAME}' restored. Run: orb shell ${VM_NAME}"
+echo "VM '${VM_NAME}' restored. Run: orb -m ${VM_NAME}"

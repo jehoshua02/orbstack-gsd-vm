@@ -29,5 +29,5 @@ Imports the snapshot, replacing the existing VM. Prompts for confirmation before
 ## Shell Access
 
 ```bash
-orb shell gsd
+orb -m gsd
 ```
