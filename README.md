@@ -8,7 +8,15 @@ OrbStack Ubuntu VM provisioned with Git, Docker, Claude Code, and GSD Pi.
 ./up.sh
 ```
 
-Creates (or starts) a `gsd` VM and installs all tools. Prints version info on completion.
+Creates (or starts) a `gsd` VM and installs all tools. Prints version info on completion. Exports a snapshot on first successful run.
+
+### Restore from snapshot
+
+```bash
+./restore.sh
+```
+
+Imports the snapshot, replacing the existing VM. Prompts for confirmation before deleting.
 
 ## Tools Installed
 
