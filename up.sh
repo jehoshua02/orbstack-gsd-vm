@@ -28,5 +28,13 @@ orb run -m "$VM_NAME" bash -c '
   echo "gsd:        $(gsd --version 2>&1 || echo "NOT FOUND")"
   echo "claude:     $(claude --version 2>&1 || echo "NOT FOUND")"
 '
+SNAPSHOT="${SCRIPT_DIR}/${VM_NAME}-snapshot.tar"
+if [ ! -f "$SNAPSHOT" ]; then
+  echo ""
+  echo "Exporting snapshot to ${SNAPSHOT}..."
+  orb export "$VM_NAME" "$SNAPSHOT"
+  echo "Snapshot saved."
+fi
+
 echo ""
 echo "VM '${VM_NAME}' is ready. Run: orb shell ${VM_NAME}"
